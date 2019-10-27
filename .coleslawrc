@@ -2,7 +2,7 @@
 (;; Required information
  :author "masataro"                         ;; to be placed on post pages and in the copyright/CC-BY-SA notice
  :deploy-dir "deploy/"                ;; for Coleslaw's generated HTML to go in
- :domain ""                           ;; to generate absolute links to the site content
+ :domain "https://fake.org"                           ;; to generate absolute links to the site content
  :routing ((:post           "posts/~a") ;; to determine the URL scheme of content on the site
            (:tag-index      "tag/~a")
            (:month-index    "date/~a")
@@ -23,7 +23,7 @@
            (static-pages)
            ; deployment to github pages
            (gh-pages :url "git@github.com:guicho271828/myblog-test.git"
-                     ; :cname t  ;; if you want to use the custom domain --- see http://pages.github.com/
+                     :cname t  ;; if you want to use the custom domain --- see http://pages.github.com/
                      )
            ; (versioned)    ;; *Remove comment to enable symlinked, timestamped deploys.
            ;; default deploy method is rsync
